@@ -1,1 +1,4 @@
-
+lda 0000
+cma 
+sta 001
+hlt
