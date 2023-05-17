@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	long int decimalnumber,remainder,quotient;
+		int i=1,j,temp;
+		char hexadecimalnumber[100];
+		printf("enter any decimal number:");
+		scanf("%d",&decimalnumber);
+		quotient=decimalnumber;
+		while(quotient!=0)
+		{
+			temp=quotient%16;
+			if(temp<10)
+			temp=temp+48;
+			else
+			temp=temp+55;
+			hexadecimalnumber[i++]=temp;
+			quotient=quotient/16;
+		}
+		printf("equivalent hexadecimal value of decimal number %d:");
+		for(j=i-1;j>0;j--)
+		printf("%c",hexadecimalnumber[j]);
+		return 0;
+}
